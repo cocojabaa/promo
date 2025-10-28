@@ -101,9 +101,7 @@ const TextType = ({
   useEffect(() => {
     if (!isVisible) return;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    let timeout: NodeJS.Timeout;
+    let timeout;
 
     const currentText = textArray[currentTextIndex];
     const processedText = reverseMode ? currentText.split('').reverse().join('') : currentText;
