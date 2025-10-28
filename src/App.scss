@@ -1,0 +1,73 @@
+@use "./styles/custom-normalize";
+@use "./styles/breakpoints" as *;
+
+@font-face {
+  font-family: "Bowler";
+  src: url("./assets/Bowler.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#root {
+  height: 100%;
+}
+
+:root {
+  @include respond-to("lg") {
+    font-size: 14px;
+  }
+  @include respond-to("md") {
+    font-size: 12px;
+  }
+  @include respond-to("sm") {
+    font-size: 10px;
+  }
+  //@include respond-to("xs") {
+  //  font-size: 9px;
+  //}
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10vw;
+  @include respond-to("sm") {
+    justify-content: space-between;
+  }
+  @include respond-to("md") {
+    align-items: start;
+    padding-top: 30vh;
+  }
+}
+
+.bro-png {
+  height: 18rem;
+  @include respond-to("md") {
+    height: 15rem;
+  }
+  min-width: 0;
+}
+
+.text {
+  width: fit-content;
+  font-family: "Bowler", sans-serif;
+  font-size: 1.7rem;
+  //text-shadow: white 0 0 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% 0;
+  white-space: nowrap;
+  text-shadow:
+          -1px -1px 0 white,
+          1px -1px 0 white,
+          -1px 1px 0 white,
+          1px 1px 0 white;
+  @include respond-to("md") {
+    top: 40%;
+  }
+}
