@@ -9,6 +9,18 @@
   font-display: swap;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
 #root {
   height: 100%;
 }
@@ -23,9 +35,6 @@
   @include respond-to("sm") {
     font-size: 10px;
   }
-  //@include respond-to("xs") {
-  //  font-size: 9px;
-  //}
 }
 
 .app {
@@ -50,13 +59,22 @@
     height: 15rem;
   }
   min-width: 0;
+  z-index: -100;
+  animation: rotate 10s infinite ease-in-out;
+  transform-origin: center center;
+  transition-duration: 0.4s;
+}
+
+@media (hover: hover) {
+  .bro-url:hover .bro-png {
+    filter: drop-shadow(0 0 8px #000);
+  }
 }
 
 .text {
   width: fit-content;
   font-family: "Bowler", sans-serif;
   font-size: 1.7rem;
-  //text-shadow: white 0 0 10px;
   position: absolute;
   left: 50%;
   top: 50%;

@@ -7,7 +7,9 @@ function App() {
 
   return (
     <div className="app">
-      <img src={leftBroPNG} alt="" className="bro-png" id="left-bro" draggable="false" />
+      <a href="https://t.me/morojjjj" className="bro-url">
+        <img src={leftBroPNG} alt="" className="bro-png" id="left-bro" draggable="false"/>
+      </a>
       <TextType
         className="text"
         text={["morojjjj x suupchiik", "we're cooking something."]}
@@ -17,7 +19,9 @@ function App() {
         cursorCharacter="▌"
         variableSpeed={{min: 60, max: 120}}
       />
-      <img src={rightBroPNG} alt="" className="bro-png" id="right-bro" draggable="false" />
+      <a href="https://t.me/suupchiik" className="bro-url">
+        <img src={rightBroPNG} alt="" className="bro-png" id="right-bro" draggable="false"/>
+      </a>
     </div>
   )
 }
